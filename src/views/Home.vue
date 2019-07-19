@@ -65,9 +65,9 @@
         </v-card-actions>
         <v-list class="pa-0">
           <template v-for="todo in filteredTodos">
-            <v-divider :key="`${todo.uid}-divider`"></v-divider>
+            <!-- <v-divider :key="`${todo.id}-divider`"></v-divider> -->
             <TodoItem
-              :key="todo.uid"
+              :key="todo.id"
               :todo="todo"
             />
           </template>
@@ -116,7 +116,7 @@ export default {
   },
   computed: {
     todos () {
-      return this.$store.state.todos
+      return  this.$store.state.todos
     },
     allChecked () {
       return this.todos.every(todo => todo.done)
