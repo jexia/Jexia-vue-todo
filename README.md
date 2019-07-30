@@ -68,8 +68,8 @@ This project is a simple integration JExia.com with Todo [PWA] (Progressive Web 
 ## Installation & Setup
 ### Clone repository
 ```
-git clone https://github.com/davidgaroro/vuetify-todo-pwa.git
-cd vuetify-todo-pwa
+git clone https://github.com/jexia/jexia-vue-todo.git
+cd jexia-vue-todo
 ```
 
 ### Install dependencies
