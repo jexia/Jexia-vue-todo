@@ -1,7 +1,8 @@
 
 # JEXIA integration for vuetify-todo-pwa
-This project is a simple Todo [PWA] (Progressive Web App) inspired by [TodoMVC]. Perfect to learn the basics about [Vue.js], [Vuex] and [Vuetify] technologies.
+This project is a simple integration JExia.com with Todo [PWA] (Progressive Web App) inspired by [TodoMVC]. Perfect to learn the basics about [Jexia.com], [Vue.js], [Vuex] and [Vuetify] technologies.
 
+[Jexia.com]: https://jexia.com
 [PWA]: https://developers.google.com/web/progressive-web-apps
 [TodoMVC]: http://todomvc.com
 [Vue.js]: https://vuejs.org
@@ -16,6 +17,7 @@ This project is a simple Todo [PWA] (Progressive Web App) inspired by [TodoMVC].
 </p>
 
 ## Features
+ - Jexia project 
  - Vue CLI 3 + Webpack + vue-loader for single file Vue components
 	-  Hot-reload in development
 	-  Lint-on-save with [ESLint (Standard)](https://github.com/standard/eslint-config-standard)
@@ -34,12 +36,14 @@ This project is a simple Todo [PWA] (Progressive Web App) inspired by [TodoMVC].
 ### Dependencies
 | Name| Description | |
 |--|--|:--:| 
+|[jexia] Cloud data management ecosystem|🖖
 |[vue]|Progressive JavaScript Framework|🖖
 |[vue-cli-3]|️Standard Tooling for Vue.js Development|🛠️
 |[vue-router]|Official Router for Vue.js|🚦
 |[vuex]|️Centralized State Management for Vue.js|🗃️
 |[vuetify]|️Material Component Framework for Vue.js|📚
 
+[jexia]: https://jexia.com
 [vue]: https://vuejs.org
 [vue-router]: https://router.vuejs.org
 [vue-cli-3]: https://cli.vuejs.org
@@ -49,11 +53,13 @@ This project is a simple Todo [PWA] (Progressive Web App) inspired by [TodoMVC].
 ### Development Dependencies
 | Name| Description | |
 |--|--|:--:| 
+|[jexia-js-sdk]|JS SDK for Jexia platform|🎨
 |[stylus-loader]|CSS preprocessor for webpack|🎨
 |[vue/cli-plugin-babel]|Compiler for next generation JavaScript|🐠
 |[vue/cli-plugin-eslint]|Pluggable JavaScript linter|✍️
 |[vue/cli-plugin-pwa]|JavaScript Library for adding support to PWA|📱
 
+[jexia-js-sdk]: https://www.npmjs.com/package/jexia-sdk-js
 [stylus-loader]: https://github.com/shama/stylus-loader
 [vue/cli-plugin-babel]: https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel
 [vue/cli-plugin-eslint]: https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint
@@ -69,6 +75,23 @@ cd vuetify-todo-pwa
 ### Install dependencies
 ```
 npm install
+```
+### Install Jexia JS SDK
+```
+npm install jexia-sdk-js node-fetch ws --save
+```
+### Setup Jexia project
+```
+1. Create project
+2. Add dataset with/ without fields with name todo
+3. Add API-key
+4. Create CRUD policy for API and Dataset
+5. Update Jexia-vue-todo/src/store.js with your project-id , API-key, API-secret:
+const Jexia_API = {
+  projectID: "project_id",   // Your Project ID at Jexia
+  key: "API key",  // Your API key at Jexia
+  secret: "API Secret", // Your API secret at JEXIA
+}
 ```
 
 ### Compiles and hot-reloads for development
@@ -86,4 +109,4 @@ npm run build
 npm run lint
 ```
 ## License
-[MIT](./LICENSE) &copy; davidgaroro
+[MIT](./LICENSE) &copy; jexia
