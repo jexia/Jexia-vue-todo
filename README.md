@@ -86,12 +86,12 @@ npm install jexia-sdk-js node-fetch ws --save
 2. Add dataset with/ without fields with name todo
 3. Add API-key
 4. Create CRUD policy for API and Dataset
-5. Update Jexia-vue-todo/src/store.js with your project-id , API-key, API-secret:
-const Jexia_API = {
-  projectID: "project_id",   // Your Project ID at Jexia
-  key: "API key",  // Your API key at Jexia
-  secret: "API Secret", // Your API secret at JEXIA
-}
+5. Update jexia-vue-todo/src/store.js with your project-id , API-key, API-secret:
+	const Jexia_API = {
+  		projectID: "project_id",   // Your Project ID at Jexia
+  		key: "API key",  // Your API key at Jexia
+  		secret: "API Secret", // Your API secret at JEXIA
+	}
 ```
 
 ### Compiles and hot-reloads for development
