@@ -36,7 +36,7 @@ This project is a simple integration JExia.com with Todo [PWA] (Progressive Web 
 ### Dependencies
 | Name| Description | |
 |--|--|:--:| 
-|[jexia] Cloud data management ecosystem|🖖
+|[jexia]|Cloud data management ecosystem|🖖
 |[vue]|Progressive JavaScript Framework|🖖
 |[vue-cli-3]|️Standard Tooling for Vue.js Development|🛠️
 |[vue-router]|Official Router for Vue.js|🚦
