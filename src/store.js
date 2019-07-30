@@ -1,6 +1,7 @@
 /* eslint-disable */
 import Vue from 'vue'
 import Vuex from 'vuex'
+import Jexia_API from './jexia'
 import { jexiaClient, dataOperations, field } from 'jexia-sdk-js/browser' // We use browser as our code will be run on browser not as node app.
 
 Vue.use(Vuex)
@@ -9,11 +10,11 @@ Vue.use(Vuex)
 const dataModule = dataOperations()
 
 // Do not forget to create CRUD Policy at JEXIA for JEXIA API, otherwise you will get 404 
-const Jexia_API = {
+/* const Jexia_API = {
   projectID: "project_id",   // Your Project ID at Jexia
   key: "API key",  // Your API key at Jexia
   secret: "API Secret", // Your API secret at JEXIA
-}
+} */
 
 jexiaClient().init(Jexia_API, dataModule);
 const Jexia = dataModule.dataset('todo') // DataSet name on Jexia Platform
@@ -88,7 +89,7 @@ const actions = {
     todo.done=!todo.done 
     Jexia
         .update(todo)
-        //.where(field("id").isEqualTo(todo.id))  // as soon as todo has ID field Jexia automatically fetch record and make update.
+        .where(field("id").isEqualTo(todo.id))  
         .execute()
         .then((data) => {
           commit('editTodo', { todo : data[0] }) //as soon as Jexia return array in resutl we need to take 1st element
@@ -100,6 +101,7 @@ const actions = {
     todo.text=value
     Jexia
         .update(todo)
+        .where(field("id").isEqualTo(todo.id))
         .execute()
         .then((data) => {
           commit('editTodo', { todo : data[0] }) //as soon as Jexia return array in resutl we need to take 1st element
