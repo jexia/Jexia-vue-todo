@@ -6,18 +6,6 @@
       <v-card>
         <v-list class="pa-0">
           <v-list-tile>
-            <v-list-tile-action>
-              <v-checkbox
-                :input-value="allChecked"
-                @change="toggleAll(!allChecked)"
-                color="primary"
-                v-if="todos.length > 0"
-              ></v-checkbox>
-              <v-icon
-                color="primary"
-                v-else
-              >check</v-icon>
-            </v-list-tile-action>
             <v-text-field
               :label="'New todo input'"
               @keydown.enter="addTodo"
@@ -118,9 +106,6 @@ export default {
     todos () {
       return  this.$store.state.todos
     },
-    allChecked () {
-      return this.todos.every(todo => todo.done)
-    },
     filteredTodos () {
       return filters[this.visibility](this.todos)
     },
@@ -134,9 +119,8 @@ export default {
   },
   methods: {
     ...mapActions([
-      'toggleAll',
       'clearCompleted'
-    ]),
+    ]), 
     addTodo () {
       const text = this.newTodo.trim()
       if (text) {
