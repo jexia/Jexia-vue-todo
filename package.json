@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint",
     "init": "npm i -g",
     "server": "node serve.js",
-    "start": "npm-run-all init server"
+    "start": "npm i && node serve.js"
   },
   "dependencies": {
     "jexia-sdk-js": "^4.1.0",
