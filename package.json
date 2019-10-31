@@ -5,11 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "init": "npm i -g",
+    "server": "node serve.js",
+    "start": "npm-run-all init server"
   },
   "dependencies": {
     "jexia-sdk-js": "^4.1.0",
     "node-fetch": "^2.6.0",
+    "node-static": "^0.7.11",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
