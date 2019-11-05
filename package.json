@@ -5,9 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "npm install http-server -g && npm run build && http-server ./dist -p 80"
+    "start": "http-server ./dist -p 80"
   },
   "dependencies": {
+    "http-server": "^0.11.1",
     "jexia-sdk-js": "^4.1.0",
     "node-fetch": "^2.6.0",
     "register-service-worker": "^1.5.2",
