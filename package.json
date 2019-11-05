@@ -5,10 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "init": "npm i -g",
-    "server": "node serve.js",
-    "start": "npm install http-server -g && npm i && vue-cli-service build && http-server ./dist -p 80"
+    "start": "npm install http-server -g && npm run build && http-server ./dist -p 80"
   },
   "dependencies": {
     "jexia-sdk-js": "^4.1.0",
@@ -26,7 +23,6 @@
     "@vue/cli-plugin-eslint": "^3.0.1",
     "@vue/cli-plugin-pwa": "^3.0.1",
     "@vue/cli-service": "^3.0.1",
-    "@vue/eslint-config-standard": "^3.0.1",
     "babel-plugin-transform-imports": "^1.5.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
