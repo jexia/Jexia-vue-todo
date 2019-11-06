@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npm i @vue/cli-service && @vue/cli-plugin-pwa && @vue/cli-plugin-babel && @vue/cli-plugin-eslint && vue-cli-service build",
     "start": "http-server ./dist -p 80"
   },
   "dependencies": {
