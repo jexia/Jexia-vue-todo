@@ -2,13 +2,15 @@ import { jexiaClient, dataOperations, field } from 'jexia-sdk-js/browser' // We 
 // We need to activate Data Operation to be able to use DataSet operation.
 const dataModule = dataOperations()
 
+// Please bare in mind, we put here Key/ Secret just for test reason. So you will be able to test app strate away.
+// In real app beeter to use middleware in NodeJS or by using Jexia UMS
 const Jexia_API = {
-    projectID: '4debe611-fb9b-4734-949c-6d39bb9ec4ae',   // Your Project ID at Jexia
+    projectID: '4debe611-fb9b-4734-949c-6d39bb9ec4ae', // Your Project ID at Jexia
     key: 'b8876695-2a25-4b12-99eb-d30ef6af8fd6',  // Your API key at Jexia
-    secret: '0ZyHP8RqClSx8DP3Wed0N44YfHPU02mffFsKBsLOkM0Hag+ds3uZpdn1Egkdc0XUgVfQ3kJetZjJqxfJJq494w==', // Your API secret at JEXIA
+    secret: '0ZyHP8RqClSx8DP3Wed0N44YfHPU02mffFsKBsLOkM0Hag+ds3uZpdn1Egkdc0XUgVfQ3kJetZjJqxfJJq494w==' // Your API secret at JEXIA
   } 
 
-  jexiaClient().init(Jexia_API, dataModule);
+jexiaClient().init(Jexia_API, dataModule);
 const Jexia = dataModule.dataset('todo') // DataSet name on Jexia Platform    
 
 function jx_read(filter=field("id").isNotNull()) {
