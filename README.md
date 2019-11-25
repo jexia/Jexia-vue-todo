@@ -1,5 +1,5 @@
 
-# JEXIA integration for vuetify-todo-pwa
+# Todo App - JEXIA integration for vuetify-todo-pwa
 This project is a simple integration [Jexia.com] with Todo [PWA] (Progressive Web App) inspired by [TodoMVC]. Perfect to learn the basics about [Jexia.com], [Vue.js], [Vuex] and [Vuetify] technologies.
 
 [Jexia.com]: https://jexia.com
