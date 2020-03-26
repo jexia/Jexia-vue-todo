@@ -1,5 +1,5 @@
 
-[![Runme](https://runme.io/static/button.svg)](https://runme.io/runme?repo_url=https://github.com/jexia/jexia-vue-todo.git&repo_branch=master)
+[![Runme](https://svc.runme.io/static/button.svg)](https://runme.io/run?app_id=0f5ab4e3-4fa6-4f0b-aa40-81aea4f0b39c)
 # Todo App - JEXIA integration for vuetify-todo-pwa
 Example application: This project is a simple integration [Jexia.com] with Todo [PWA] (Progressive Web App) inspired by [TodoMVC]. Perfect to learn the basics about [Jexia.com], [Vue.js], [Vuex] and [Vuetify] technologies.
 
