@@ -20,11 +20,12 @@ function jx_read(filter=field("id").isNotNull()) {
       //.fields('created_at', 'id', 'name')  // if we want to get some specific fields versus all record. As well need to do import { fields } from "jexia-sdk-js/browser";
       .where(filter)
       .sortAsc("created_at")  //let's identify based on wich field sorting will be
-      .execute()
-      .then((data) => {
+      .subscribe(
+      data => {
         // All records from DataSet will be in data variable as a Array due to support for batch operations
           resolve(data)      
-      }).catch((error) => {
+      },
+      error => {
           reject(error)
       })
   })
@@ -34,10 +35,11 @@ function jx_create(data) {
   return new Promise((resolve, reject) => {
     Jexia
         .insert(data)
-        .execute()
-        .then((res) => {
+        .subscribe(
+        res => {
           resolve(res)    
-        }).catch((error) => {
+        },
+        error => {
           reject(error)
         })
   })
@@ -48,10 +50,11 @@ function jx_delete(id,filter=field("id").isEqualTo(id)) {
       Jexia
       .delete()
       .where(filter)
-      .execute()
-      .then((res) => {
+      .subscribe(
+      res => {
         resolve(res)
-      }).catch((error) => { 
+      },
+      error => { 
         reject(error)
       }) 
     })
@@ -66,10 +69,11 @@ function jx_updateById(id,data,filter=field("id").isEqualTo(id)) {
     Jexia
         .update(to_save)
         .where(filter) 
-        .execute()
-        .then((res) => {
+        .subscribe(
+        res => {
           resolve(res)
-        }).catch((error) => {
+        },
+        error => {
           reject(error)
         })
   })
@@ -80,10 +84,11 @@ function jx_update(to_save,filter=field("id").isEqualTo(id)) {
     Jexia
         .update(to_save)
         .where(filter) 
-        .execute()
-        .then((res) => {
+        .subscribe(
+        res => {
           resolve(res)
-        }).catch((error) => {
+        },
+        error => {
           reject(error)
         })
   })

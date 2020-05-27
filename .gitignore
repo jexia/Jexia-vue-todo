@@ -2,7 +2,7 @@
 node_modules
 /dist
 
-#jexia.js
+package-lock.json
 
 # local env files
 .env.local
