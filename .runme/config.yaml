@@ -1,0 +1,11 @@
+version: 1.0
+publish: app
+services:
+  app:
+    command: npm run serve
+    build:
+      type: dockerfile
+      config: ./.runme/Dockerfile
+    ports:
+      - container: 8000
+        public: 80
